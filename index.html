@@ -1,10 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
   <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Keith Brown</title>
 
     <!-- Font Awesome -->
@@ -16,19 +13,83 @@
 
     <!-- MDB -->
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/6.1.0/mdb.min.js"></script>
+
+    <script src="moment.js"></script>
   </head>
 
-  <body class="bg-dark">
-    <div class="p-5 text-white">
-      <h1 class="mb-3">Keith Brown</h1>
-      <h4 class="mb-3">Software Engineer</h4>
+  <body class="container-md bg-dark text-white">
 
-      <h1 class="text-center mb-3">
-        Note: This website is still being created. Please come back later.
-      </h1>
+    <nav>
 
-      Contact me if you have questions at <a href="mailto:keithbrown39423@outlook.com">keithbrown39423@outlook.com</a>
-    </div>
+    </nav>
+
+    <section id="information">
+      <h1>Keith Brown</h1>
+      <h4>Computer Programmer</h4>
+      <section id="bio">
+        <h3>Bio</h3>
+        <p>
+          My name is Keith Brown. I am a self-taught computer programmer and
+          have been for <span id="years-programmer"></span>.
+          My journey started shortly after COVID hit and since then I have
+          been actively learning and improving my skills. I started with doing
+          basic HTML and CSS with some JavaScript mixed in and now have the
+          knowledge of C, C++, Java, Python, and several others. My main goal
+          for my life is to work for NASA doing software engineering. I have
+          had a fascination with NASA and space ever since I was a kid and would
+          like to continue on with the dreams of my younger self.
+        </p>
+      </section>
+      <section id="contact">
+        <h3>Contact</h3>
+        If you would like to contact me, you can do so through the following sources. <br>
+        <i class="fa-sharp fa-solid fa-phone"></i> (979) 215-7526 <br>
+        <i class="fa-sharp fa-solid fa-envelope"></i> <a href="mailto:keithbrown39423@outlook.com">keithbrown39423@outlook.com</a> <br>
+        <i class="fa-brands fa-linkedin"></i> <a href="https://linkedin.com/in/keithbrown39423">KeithBrown39423</a> <br>
+        <!-- <img src="" alt="Twitter Icon"> <a href="https://twitter.com/keithbrown39423">KeithBrown39423</a> -->
+      </section>
+    </section>
+    <section id="skills">
+      <h3>Skills</h3>
+      I am skilled in various parts of the programming industry, however, these are some of my best.
+      <ul>
+        <li>C and C++</li>
+        <li>HTML and CSS</li>
+        <li>JavaScript and NodeJS</li>
+        <li>Linux</li>
+        <li>Microsoft Office</li>
+      </ul>
+    </section>
+    <section id="certifications">
+      <h3>Certifications</h3>
+      Towards the end of my freshman year, I was awarded the Microsoft Office
+      Specialist - Expert Certificate, and was the first freshman at my school
+      to ever acheive this.
+      <br>
+      <img width="440" height="340" src="assets/Microsoft Office Specialist Expert Office 2019.png" alt="Microsoft Office Specialist Expert Certificate from Certiport" />
+    </section>
+    <section id="projects">
+      <h3>Projects</h3>
+      <p>
+        I recently finished my first project to be published. It is a simple hexdump
+        utility with the purpose of replace the one that comes installed on UNIX systems.
+
+        Check out project on GitHub <a href="https://github.com/keithbrown39423/Hexdump">here</a>.
+      </p>
+      <p>
+        I am also currently working on a Stock Prediction AI in Java.
+        Currently, the source code is not uploaded yet, however, this will be updated as soon as it is.
+      </p>
+    </section>
+
+    <footer>
+
+    </footer>
+
+    <!-- Calculate post-loaded content -->
+    <script>
+      document.getElementById("years-programmer").innerText = moment("202201", "YYYYMM").fromNow().slice(0, -4);
+    </script>
   </body>
 
 </html>

@@ -1,0 +1,37 @@
+.text-important {
+    color: var(--mdb-gray-300);
+}
+
+.custom-container {
+  max-width: 540px;
+}
+
+.img-thumbnail {
+    background-color: hsl(0, 0%, 25%);
+    border: hsl(0, 0%, 23%);
+}
+
+body {
+    background-color: #2d2d2d !important;
+    font-family: 'Belanosima', sans-serif;
+    color: var(--mdb-gray-400) !important;
+}
+
+.border-custom {
+    border-color: var(--mdb-gray-800) !important;
+}
+
+.list-group a:hover {
+    cursor: pointer;
+    background-color: var(--mdb-gray-900) !important;
+    color: var(--mdb-gray-400) !important;
+}
+
+.list-group a {
+    color: var(--mdb-gray-400) !important;
+    text-align: left;
+}
+
+.fa-1_5x {
+    font-size: 1.5rem;
+}

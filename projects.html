@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Projects - Keith Brown</title>
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/projects.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    </head>
+
+    <body>
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="index.html" class="nav-logo">Keith Brown</a>
+                <div class="nav-menu" id="nav-menu">
+                    <a href="index.html" class="nav-link">Home</a>
+                    <a href="index.html#about" class="nav-link">About</a>
+                    <a href="index.html#skills" class="nav-link">Skills</a>
+                    <a href="projects.html" class="nav-link">Projects</a>
+                    <a href="index.html#contact" class="nav-link">Contact</a>
+                </div>
+                <div class="hamburger" id="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Projects Header -->
+        <section class="projects-header">
+            <div class="container">
+                <h1>My Projects</h1>
+                <p>A collection of my recent work showcasing various technologies and problem-solving approaches</p>
+            </div>
+        </section>
+
+        <!-- Projects Container -->
+        <section class="projects-container">
+            <div class="container">
+                <!-- Projects Grid -->
+                <div class="projects-grid">
+                    <!-- E-Commerce Platform -->
+                    <div class="project-detail">
+                        <div class="project-image">
+                            <img src="images/eldenwickcandles.png" alt="E-Commerce Platform">
+                        </div>
+                        <div class="project-detail-content">
+                            <span class="project-status status-completed">Completed</span>
+                            <h3>E-Commerce Platform</h3>
+                            <p>A full-stack e-commerce solution built with modern technologies. Features include product
+                                management, shopping cart functionality, and payment integration with Square.</p>
+
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>Product catalog with search and filtering</li>
+                                <li>Shopping cart and wishlist functionality</li>
+                                <li>Secure payment processing with Square</li>
+                                <li>Responsive design for all devices</li>
+                            </ul>
+
+                            <div class="project-tech">
+                                <span>HTML</span>
+                                <span>Node.js</span>
+                                <span>Express.js</span>
+                                <span>Square API</span>
+                                <span>Cloudflare Workers</span>
+                            </div>
+
+                            <div class="project-links">
+                                <a href="https://github.com/Elden-Wick-Candles/website" class="project-link"
+                                    target="_blank"><i class="fab fa-github"></i> Code</a>
+                                <a href="https://eldenwickcandles.com" class="project-link" target="_blank"><i
+                                        class="fas fa-external-link-alt"></i> Site</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Hexdump -->
+                    <div class="project-detail">
+                        <div class="project-image">
+                            <img src="images/hexdump.png" alt="Hexdump">
+                        </div>
+                        <div class="project-detail-content">
+                            <span class="project-status status-completed">Completed</span>
+                            <h3>Hexdump</h3>
+                            <p>A tool for analyzing binary files and displaying their contents in a human-readable
+                                format. Built with a focus on performance and usability.</p>
+
+                            <h4>Key Features:</h4>
+                            <ul>
+                                <li>ASCII sidebar</li>
+                                <li>Skipping bytes</li>
+                                <li>Specified length</li>
+                                <li>Multiple formats</li>
+                                <li>Colored output</li>
+                                <li>Output to file</li>
+                            </ul>
+
+                            <div class="project-tech">
+                                <span>Zig</span>
+                                <span>Binary File Processing</span>
+                                <span>CLI Tools</span>
+                                <span>Zig Clap</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/KeithBrown39423/Hexdump" class="project-link"
+                                    target="_blank"><i class="fab fa-github"></i> Code</a>
+                                <a href="https://github.com/KeithBrown39423/Hexdump/releases" class="project-link"
+                                    target="_blank"><i class="fas fa-external-link-alt"></i> Download</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- ZUID -->
+                    <div class="project-detail">
+                        <div class="project-image">
+                            <img src="images/zuid.png" alt="ZUID">
+                        </div>
+                        <div class="project-detail-content">
+                            <span class="project-status status-completed">Completed</span>
+                            <h3>ZUID</h3>
+                            <p>A tool for generating and validating UUIDs (Universally Unique Identifiers) in various
+                                formats. RFC 9562 compliant.</p>
+
+                            <h4>Key Features:</h4>
+                            <ul>
+
+                                <li>Generate UUIDs of most versions (1, 3, 4, 5, 6, 7, and 8)</li>
+                                <li>Parse UUIDs from strings</li>
+                                <li>Create UUIDs from binary arrays</li>
+                                <li>Convert UUIDs to strings, 128-bit integers, and byte-arrays</li>
+                                <li>Access to parts of UUID (set_1, version, variant, etc.)</li>
+                            </ul>
+
+                            <div class="project-tech">
+                                <span>UUIDs</span>
+                                <span>RFC 9562</span>
+                                <span>Zig</span>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/KeithBrown39423/ZUID" class="project-link"
+                                    target="_blank"><i class="fab fa-github"></i> Code</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="container">
+                <p>&copy; 2025 Keith Brown. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script src="js/script.min.js"></script>
+    </body>
+
+</html>

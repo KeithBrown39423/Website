@@ -1,18 +1,5 @@
-@use "variables" as v;
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    background-color: v.$color-primary-dark;
-    color: v.$color-text;
-    line-height: 1.6;
-    overflow-x: hidden;
-}
+@use "globals" as g;
+@use "sass:color";
 
 .top-nav {
     @extend %page-container;
@@ -21,55 +8,49 @@ body {
 
 .container {
     @extend %page-container;
-    max-width: 720px; // Linktree specific override
-    padding-top: v.$spacing-xxl;
-    padding-bottom: v.$spacing-xxl;
+    max-width: 720px;
 }
 
 .meta {
-    color: #bbbbbb;
+    color: g.$color-text-muted;
 }
 
 header {
-    padding-bottom: v.$spacing-sm;
+    padding-bottom: g.$spacing-sm;
 }
 
 hr {
     border: none;
-    border-top: 2px solid rgba(255, 255, 255, 0.1);
-    margin-top: 0;
-    margin-bottom: v.$spacing-sm;
+    border-top: 2px solid g.$color-tertiary-dark;
+    margin: 0 default g.$spacing-sm;
 }
 
-
 .noscript-banner {
-    background-color: #ff7a7a45;
-    border-left: 4px solid #de3434;
-    color: #eeeeee;
-    padding: 16px;
-    margin-bottom: 24px;
+    background-color: color.mix(g.$color-danger, g.$color-primary-dark, 30%);
+    border-left: 4px solid g.$color-danger;
+    border-radius: 4px;
     font-size: 0.95rem;
     font-weight: 500;
+    margin-bottom: 24px;
+    padding: 16px;
 }
 
 .license-text {
-    // Spacing between paragraphs
+    background-color: color.adjust(g.$color-secondary-dark, $lightness: -2.5%);
+    border-radius: 6px;
+    border: 1px solid g.$color-tertiary-dark;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+    line-height: 1.5;
+    padding: 16px;
+
     p {
-        margin-bottom: v.$spacing-xs; // Adjust variable name if needed, or use '1.5rem'
-        color: v.$color-text;
+        color: g.$color-text;
         font-size: 0.95rem;
+        margin-bottom: g.$spacing-xs;
         text-align: justify;
     }
 
-    // Stylize the ALL CAPS warranty disclaimer
     .license-disclaimer {
-        font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
         font-size: 0.85rem;
-        line-height: 1.7;
-        color: #cccccc; 
-        background-color: rgba(255, 255, 255, 0.03);
-        padding: 16px;
-        border-radius: 6px;
-        border: 1px solid rgba(255, 255, 255, 0.05);
     }
 }

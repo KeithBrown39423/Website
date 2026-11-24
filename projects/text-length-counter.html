@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Length Counter</title>
+    <style>
+        :root {
+            --bg-color: #05070a;
+            --card-bg: #000000;
+            --text-main: #d4d4d4;
+            --text-muted: #717e7f;
+            --primary: #a0bce3;
+            --border: #1e2024;
+            --focus: #3498db;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .container {
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
+            width: 100%;
+            max-width: 650px;
+            box-sizing: border-box;
+            text-align: center;
+        }
+
+        h1 {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-top: 0;
+            margin-bottom: 0.5rem;
+        }
+
+        p.subtitle {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+        }
+
+        textarea {
+            width: 100%;
+            height: 200px;
+            padding: 1rem;
+            background-color: var(--card-bg);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-main);
+            font-size: 1rem;
+            font-family: inherit;
+            resize: vertical;
+            box-sizing: border-box;
+            outline: none;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        textarea:focus {
+            border-color: var(--focus);
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+        }
+
+        .counter-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .counter-card {
+            background-color: var(--bg-color);
+            padding: 1rem;
+            border-radius: 8px;
+            border: 1px solid rgba(0,0,0,0.02);
+        }
+
+        .counter-val {
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: var(--primary);
+            display: block;
+        }
+
+        .counter-label {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 0.25rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Text Length Inspector</h1>
+        <p class="subtitle">Paste your text below to instantly calculate metrics.</p>
+        
+        <textarea id="textInput" placeholder="Type or paste your text here..." autofocus autocomplete="off"></textarea>
+        
+        <div class="counter-grid">
+            <div class="counter-card">
+                <span id="charCount" class="counter-val">0</span>
+                <span class="counter-label">Characters</span>
+            </div>
+            <div class="counter-card">
+                <span id="charNoSpaces" class="counter-val">0</span>
+                <span class="counter-label">No Spaces</span>
+            </div>
+            <div class="counter-card">
+                <span id="wordCount" class="counter-val">0</span>
+                <span class="counter-label">Words</span>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const textInput = document.getElementById('textInput');
+        const charCount = document.getElementById('charCount');
+        const charNoSpaces = document.getElementById('charNoSpaces');
+        const wordCount = document.getElementById('wordCount');
+
+        textInput.addEventListener('input', () => {
+            const text = textInput.value;
+            
+            // 1. Total Character Count (including spaces and newlines)
+            charCount.textContent = text.length;
+            
+            // 2. Character Count excluding whitespace
+            charNoSpaces.textContent = text.replace(/\s/g, '').length;
+            
+            // 3. Word Count
+            // Trims outer spaces and splits by any sequence of whitespace
+            const cleanText = text.trim();
+            if (cleanText === '') {
+                wordCount.textContent = '0';
+            } else {
+                const words = cleanText.split(/\s+/);
+                wordCount.textContent = words.length;
+            }
+        });
+    </script>
+
+</body>
+</html>
